@@ -1,0 +1,1 @@
+SELECT p.name FROM people AS p WHERE p.id IN (SELECT DISTINCT s.person_id FROM stars s JOIN movies m ON s.movie_id = m.id WHERE m.year = 2004);
